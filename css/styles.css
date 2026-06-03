@@ -1,0 +1,603 @@
+/* ============================================================
+   VARIABLES I PALETA (tema marí)
+   ============================================================ */
+:root {
+  --c-deep:    #0A3356;   /* blau marí: textos, títols, línies */
+  --c-sea:     #00A5CD;   /* cian de marca */
+  --c-primary: #00A5CD;   /* cian: enllaços i detalls */
+  --c-sky:     #9fd6e6;   /* cian clar (text del peu) */
+  --c-foam:    #E6F1F5;   /* fons amb un toc de mar suau (60% del lloc) */
+  --c-sand:    #ff9a3d;   /* taronja clar (hover del CTA) */
+  --c-sun:     #FF7A00;   /* taronja CTA "Reserva" */
+  --c-white:   #ffffff;
+  --c-text:    #0A3356;   /* text principal */
+  --c-muted:   #475569;   /* text secundari */
+
+  --shadow-sm: 0 2px 10px rgba(2, 48, 71, 0.08);
+  --shadow-md: 0 10px 30px rgba(2, 48, 71, 0.16);
+  --radius:    16px;
+  --maxw:      1240px;
+  --t:         0.3s ease;
+}
+
+/* ============================================================
+   RESET I BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body {
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 400;
+  color: var(--c-text);
+  background: var(--c-foam);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ============================================================
+   1. ENCAPÇALAMENT
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--c-foam);     /* mateix fons que la resta (toc de mar, no blanc) */
+  box-shadow: var(--shadow-sm);
+}
+
+/* Selector d'idioma amb banderes (a la dreta de la barra blanca) */
+.lang-switcher {
+  display: flex;
+  gap: 0.45rem;
+  grid-column: 3;
+  justify-self: end;
+}
+.lang-btn {
+  border: 2px solid transparent;
+  background: transparent;
+  padding: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.55;
+  line-height: 0;
+  transition: var(--t);
+}
+.lang-btn:hover { opacity: 1; }
+.lang-btn.active { opacity: 1; border-color: var(--c-primary); }
+.lang-btn img {
+  width: 30px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);   /* contorn fi perquè es vegi sobre blanc */
+}
+
+/* Barra principal */
+.mainbar { background: var(--c-foam); }
+.mainbar-inner {
+  position: relative;
+  max-width: none;
+  margin: 0;
+  padding: 0.45rem 2rem;                /* barra una mica més baixa */
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;  /* logo esq. | pestanyes centre | idiomes dreta */
+  align-items: center;
+  gap: 1.5rem;
+}
+.logo-link { grid-column: 1; justify-self: start; }   /* logo a l'esquerra de tot */
+.nav-row   { grid-column: 2; justify-self: center; }  /* pestanyes al centre */
+.logo {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
+  transition: height var(--t);
+}
+/* La capçalera s'encongeix en fer scroll */
+.site-header.scrolled .logo { height: 42px; }
+.site-header.scrolled .mainbar-inner { padding-top: 0.35rem; padding-bottom: 0.35rem; }
+
+/* Pestanyes */
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.nav-item > a {
+  display: block;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.4px;
+  color: var(--c-deep);
+  transition: var(--t);
+}
+.nav-item > a:hover { background: var(--c-white); color: var(--c-primary); }
+
+/* Menú desplegable (Tour Privat) */
+.has-dropdown { position: relative; }
+.has-dropdown > a::after {
+  content: "▾";
+  margin-left: 0.35rem;
+  font-size: 0.7rem;
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  min-width: 240px;
+  background: var(--c-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--t);
+  z-index: 50;
+}
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(6px);
+}
+.dropdown a {
+  display: block;
+  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--c-text);
+  transition: var(--t);
+}
+.dropdown a:hover { background: var(--c-foam); color: var(--c-primary); }
+
+/* Botó hamburguesa */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+.nav-toggle span {
+  width: 26px;
+  height: 3px;
+  background: var(--c-deep);
+  border-radius: 2px;
+  transition: var(--t);
+}
+
+/* ============================================================
+   2. HERO (fondo.jpg que es mou amb l'scroll)
+   ============================================================ */
+.hero {
+  position: relative;
+  /* L'alçada segueix la proporció de la foto (2952x1344 = 45.5%) perquè es vegi SENCERA */
+  height: 45.5vw;
+  min-height: 460px;
+  max-height: 96vh;
+  display: flex;
+  align-items: flex-start;          /* text a dalt */
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem 1.5rem;
+  color: var(--c-white);
+  /* Degradat: a dalt transparent (es veu el cel), al centre clar (la barca),
+     a baix fosc (el text es llegeix bé) */
+  background-image:
+    linear-gradient(180deg,
+      rgba(2, 48, 71, 0.08) 0%,
+      rgba(2, 48, 71, 0.20) 45%,
+      rgba(2, 48, 71, 0.70) 100%),
+    url("../img/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* SENSE "fixed": la imatge es desplaça amb la pàgina */
+}
+.hero-overlay { max-width: 900px; margin: 0 auto; width: 100%; }
+.hero-title {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+.hero-title-main { display: block; font-size: clamp(2.6rem, 8vw, 5.6rem); font-weight: 800; white-space: nowrap; }
+.hero-title-sub  { display: block; margin-top: 0.25rem; font-size: clamp(1.1rem, 3vw, 2.1rem); font-weight: 600; letter-spacing: 2px; }
+.hero-subtitle {
+  margin: 1.1rem 0 2rem;
+  font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+  font-weight: 600;
+  color: var(--c-sun);                       /* taronja corporatiu */
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55); /* perquè es llegeixi sobre la foto */
+}
+.btn-primary {
+  position: absolute;        /* separat del text, ancorat a baix */
+  left: 50%;
+  bottom: 6rem;            /* just sota la barca; puja/baixa aquest valor */
+  transform: translateX(-50%);
+  background: var(--c-sun);
+  color: var(--c-white);
+  font-weight: 700;
+  padding: 0.9rem 2.4rem;
+  border-radius: 999px;
+  box-shadow: var(--shadow-md);
+  transition: var(--t);
+}
+.btn-primary:hover { background: var(--c-sand); transform: translateX(-50%) translateY(-3px); }
+
+/* ============================================================
+   2. FINESTRES (3 + 3)
+   ============================================================ */
+.windows {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem;
+}
+.windows-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.window {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;          /* per alinear el botó a baix */
+  background: var(--c-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--t), box-shadow var(--t);
+}
+/* En passar-hi el cursor: zoom (s'amplia) i se situa per damunt de les altres.
+   Es fa servir més especificitat perquè guanyi a ".reveal.visible { transform: none }" */
+.windows-grid .window:hover {
+  transform: scale(1.06);
+  z-index: 10;
+  box-shadow: var(--shadow-md);
+}
+
+/* Ressaltat suau de la finestra quan s'hi arriba des d'una pestanya de ruta */
+.window.flash {
+  z-index: 10;
+  animation: windowFlash 1.6s ease;
+}
+@keyframes windowFlash {
+  0%   { transform: scale(1);    box-shadow: 0 0 0 0 rgba(0, 165, 205, 0.45), var(--shadow-sm); }
+  40%  { transform: scale(1.035); box-shadow: 0 0 0 9px rgba(0, 165, 205, 0.22), var(--shadow-md); }
+  100% { transform: scale(1);    box-shadow: 0 0 0 0 rgba(0, 165, 205, 0), var(--shadow-sm); }
+}
+
+/* Slideshow amb fos encadenat lent */
+.slideshow {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;        /* encaixa millor les fotos (menys retall) */
+  flex-shrink: 0;
+  overflow: hidden;
+  background: var(--c-sky);
+}
+.slideshow .slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;   /* fos lent (degradat) entre fotos */
+}
+.slideshow .slide.active { opacity: 1; }
+
+/* Etiqueta flotant "Privat / Compartit" a dalt de la foto (vidre glaçat) */
+.route-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 5;
+  padding: 0.32rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(10, 51, 86, 0.38);            /* blau marí translúcid */
+  backdrop-filter: blur(6px);                    /* difumina la foto del darrere */
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  pointer-events: none;                          /* no molesta els clics */
+}
+
+/* Fletxes estil Instagram (només visibles en hover) */
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;                       /* sense cercle blanc */
+  color: var(--c-white);
+  font-size: 2.4rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);    /* perquè es vegi sobre la foto */
+  transition: opacity var(--t), transform var(--t);
+  z-index: 4;
+}
+.slide-arrow:hover { transform: translateY(-50%) scale(1.18); }
+.slide-arrow.prev { left: 6px; }
+.slide-arrow.next { right: 6px; }
+.window:hover .slide-arrow { opacity: 1; }   /* apareixen en passar el cursor */
+
+/* Placeholder quan encara no hi ha fotos (finestra Pesca) */
+.slideshow.no-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--c-sky), var(--c-primary));
+}
+.no-photo-label {
+  color: var(--c-white);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.window-info {
+  padding: 1.4rem 1.6rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;                /* ocupa tota l'alçada -> el botó es pot alinear a baix */
+}
+.window-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--c-deep);
+  margin-bottom: 0.7rem;
+}
+.window-detail { margin-bottom: 1.2rem; }
+.window-detail span {
+  display: block;
+  color: var(--c-muted);
+  font-size: 0.98rem;
+}
+
+/* Botó "RESERVA AHORA" (obre WhatsApp) */
+.btn-reserve {
+  display: block;
+  margin-top: auto;          /* enganxat a baix -> tots els botons alineats */
+  text-align: center;
+  background: var(--c-sun);
+  color: var(--c-white);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  transition: var(--t);
+}
+.btn-reserve:hover { background: var(--c-sand); transform: translateY(-2px); }
+
+/* Animació d'aparició en fer scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ============================================================
+   2b. SECCIÓ "QUÈ INCLOUEN LES RUTES"
+   ============================================================ */
+.includes {
+  background: var(--c-foam);     /* mateix fons clar -> sense canvi brusc */
+  color: var(--c-deep);
+  padding: 3.5rem 1.5rem;
+}
+.includes-inner { max-width: var(--maxw); margin: 0 auto; text-align: center; }
+.includes h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+.includes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2.5rem;
+}
+.includes-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.includes-list .ico {
+  font-size: 1.6rem;
+  color: var(--c-primary);
+}
+
+/* Text descriptiu (entre Inclou i Galeria) */
+.intro { background: var(--c-foam); padding: 1rem 1.5rem 3.5rem; }
+.intro-text {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 500;
+  line-height: 1.75;
+  color: var(--c-deep);
+}
+
+/* ============================================================
+   2c. GALERIA (gran, gairebé tota la pantalla)
+   ============================================================ */
+.gallery { padding: 3.5rem 1.5rem 4.5rem; }
+.gallery-title {
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--c-deep);
+  margin-bottom: 2rem;
+}
+.gallery-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;            /* no ocupa tota l'amplada */
+  margin: 0 auto;
+  aspect-ratio: 3 / 2;          /* mateixa forma que les fotos -> es veuen senceres */
+  overflow: hidden;
+  border-radius: 18px;
+  border: 6px solid var(--c-white);   /* marc blanc tipus foto */
+  box-shadow: var(--shadow-md);
+  background: var(--c-deep);
+}
+.gallery-carousel .g-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;          /* foto SENCERA, sense retallar */
+  opacity: 0;
+  transition: opacity 1.2s ease;   /* fos lent (degradat) */
+}
+.gallery-carousel .g-slide.active { opacity: 1; }
+
+.g-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;                      /* sense cercle blanc */
+  color: var(--c-white);
+  font-size: 3.4rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 5;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);    /* perquè es vegi sobre la foto */
+  transition: transform var(--t);
+}
+.g-arrow:hover { transform: translateY(-50%) scale(1.15); }
+.g-prev { left: 14px; }
+.g-next { right: 14px; }
+
+/* ============================================================
+   3. PEU DE PÀGINA
+   ============================================================ */
+.site-footer { background: var(--c-deep); color: var(--c-sky); }
+.footer-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2rem;
+}
+.footer-logo {
+  height: 60px;
+  background: var(--c-white);
+  padding: 0.3rem 0.6rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.footer-col h4 { color: var(--c-white); font-weight: 700; margin-bottom: 1rem; }
+.footer-col p { margin-bottom: 0.5rem; font-weight: 300; }
+.footer-col a { color: var(--c-sky); transition: var(--t); }
+.footer-col a:hover { color: var(--c-white); }
+
+/* Icones de xarxes socials */
+.social { display: flex; gap: 0.9rem; align-items: center; }
+.social a { display: inline-flex; color: var(--c-sky); transition: var(--t); }
+.social a:hover { color: var(--c-white); transform: translateY(-2px); }
+.social svg { width: 30px; height: 30px; display: block; }
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: center;
+  padding: 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 980px) {
+  .windows-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 760px) {
+  .nav-toggle { display: flex; }
+
+  /* En mòbil: logo a l'esquerra; banderes i hamburguesa a la dreta */
+  .mainbar-inner { display: flex; align-items: center; gap: 0.6rem; }
+  .logo-link { margin-right: auto; }
+  .logo { height: 46px; }
+  .lang-switcher { gap: 0.3rem; }
+  .lang-btn img { width: 26px; height: 18px; }
+
+  .nav-row {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--c-white);
+    box-shadow: var(--shadow-md);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  .nav-row.open { max-height: 640px; }
+  .nav-list { flex-direction: column; align-items: stretch; padding-top: 0.5rem; }
+  .nav-item > a { text-align: center; padding: 0.85rem; }
+
+  /* El desplegable es mostra sempre dins del menú mòbil */
+  .has-dropdown > a::after { content: ""; }
+  .dropdown {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    min-width: auto;
+    padding: 0 0 0.5rem;
+    background: var(--c-foam);
+    border-radius: 8px;
+  }
+  .dropdown a { text-align: center; }
+
+  .windows-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; text-align: center; }
+  .footer-logo { margin-left: auto; margin-right: auto; }
+
+  /* Galeria i fletxes més contingudes en mòbil */
+  .g-arrow { width: 44px; height: 44px; font-size: 1.5rem; }
+  .g-prev { left: 10px; } .g-next { right: 10px; }
+  .includes-list { flex-direction: column; align-items: center; gap: 0.8rem; }
+}

@@ -1,0 +1,63 @@
+============================================================
+  GUIA DE LES IMATGES — Barca Tour Llançà
+  (estat actual · totes optimitzades, cap supera 1 MB)
+============================================================
+
+
+------------------------------------------------------------
+FITXERS QUE FA SERVIR LA WEB
+------------------------------------------------------------
+  fondo.jpg .............. foto de fons de la capçalera (hero)
+  logo.png ............... logo (fons transparent) capçalera + peu
+  flags/ca.svg es.svg en.svg fr.svg ... banderes dels idiomes
+  v1-* … v6-* ............ fotos de les 6 finestres (carrussel)
+  G1.jpg … G22.jpg ....... fotos de la GALERIA
+
+------------------------------------------------------------
+LES 6 FINESTRES (en l'ordre que surten a la web)
+------------------------------------------------------------
+Cada finestra té un carrussel. La PRIMERA foto de la llista
+és la que es veu de sortida; canvien al passar-hi el cursor.
+
+  1) RUTA LLANÇÀ / COLERA   → fotos v1   (1a: v1-1)
+        ordre: v1-1, v1-2, v1-3, v1-4, v1-5
+
+  2) RUTA CAP DE CREUS      → fotos v2   (1a: v2-2)
+        ordre: v2-2, v2-1, v2-3, v2-4, v2-5
+
+  3) RUTA TOUR COMPARTIT    → fotos v5   (1a: v5-5, la de l'illa)
+        ordre: v5-5, v5-1, v5-2, v5-3, v5-4
+
+  4) RUTA POSTA DE SOL      → fotos v4   (1a: v4-2)
+        ordre: v4-2, v4-3, v4-4, v4-5, v4-1
+
+  5) RUTA PERSONALITZADA    → fotos v3   (1a: v3-5)
+        ordre: v3-5, v3-4, v3-1, v3-2, v3-3
+
+  6) TOUR PESCA             → fotos v6   (1a: v6-2)
+        ordre: v6-2 … v6-10  (11 fotos)
+
+NOTA: el número del grup de fotos (v1..v6) NO coincideix amb
+la posició a la pàgina. Ex.: la finestra 3 (Tour Compartit)
+fa servir les fotos "v5", i la finestra 5 (Personalitzada) les "v3".
+
+------------------------------------------------------------
+GALERIA
+------------------------------------------------------------
+  G1.jpg fins a G22.jpg (22 fotos). Passen soles cada 3 s
+  i amb les fletxes. Per canviar-ne l'ordre, reanomena els
+  fitxers (G1 = primera).
+
+------------------------------------------------------------
+COM CANVIAR L'ORDRE O LA PRIMERA FOTO D'UNA FINESTRA
+------------------------------------------------------------
+  Obre  js\i18n.js  i busca el bloc "slideshows".
+  Cada finestra és una llista; la primera de la llista és la
+  que es veu primer. Reordena els noms i guarda.
+
+  Per AFEGIR una foto nova a una finestra:
+   1. Posa-la a la carpeta img\ amb el nom següent del grup
+      (ex. la 6a de la finestra 1 seria "v1-6.jpg").
+   2. Afegeix "img/v1-6.jpg" a la seva llista a js\i18n.js.
+   (Recomanat: optimitza-la abans perquè no pesi gaire.)
+============================================================
