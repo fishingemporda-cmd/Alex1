@@ -555,6 +555,26 @@ ul { list-style: none; }
 @media (max-width: 760px) {
   .nav-toggle { display: flex; }
 
+  /* HERO en mòbil: foto vertical pròpia (fondomobil.jpg) i títol que sempre hi cap */
+  .hero {
+    background-image:
+      linear-gradient(180deg,
+        rgba(2, 48, 71, 0.12) 0%,
+        rgba(2, 48, 71, 0.22) 45%,
+        rgba(2, 48, 71, 0.72) 100%),
+      url("../img/fondomobil.jpg");
+    aspect-ratio: 1734 / 1662;   /* proporció de fondomobil.jpg -> es veu sencera */
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    padding: 2.2rem 1.1rem 1.4rem;
+  }
+  /* El títol pot passar a més d'una línia: així hi cap sencer en tots els idiomes */
+  .hero-title-main { white-space: normal; font-size: clamp(2.2rem, 9vw, 3.6rem); }
+  .hero-title-sub  { font-size: clamp(1rem, 3.6vw, 1.5rem); }
+  .hero-subtitle   { margin: 0.8rem auto 1.4rem; max-width: 18rem; white-space: normal; overflow-wrap: break-word; font-size: clamp(0.9rem, 3.4vw, 1.2rem); }
+  .btn-primary     { bottom: 1.4rem; }
+
   /* En mòbil: logo a l'esquerra; banderes i hamburguesa a la dreta */
   .mainbar-inner { display: flex; align-items: center; gap: 0.6rem; }
   .logo-link { margin-right: auto; }

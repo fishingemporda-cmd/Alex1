@@ -252,7 +252,7 @@ const slideshows = {
   3: ["img/v3-5.jpg", "img/v3-4.jpg", "img/v3-1.jpg", "img/v3-2.jpg", "img/v3-3.jpg"],
   4: ["img/v4-2.jpg", "img/v4-3.jpg", "img/v4-4.jpg", "img/v4-5.jpg", "img/v4-1.jpg"],
   5: ["img/v5-5.jpg", "img/v5-1.jpg", "img/v5-2.jpg", "img/v5-3.jpg", "img/v5-4.jpg"],
-  6: ["img/v6-4.jpg", "img/v6-3.jpg", "img/v6-2.jpg", "img/v6-5.jpg", "img/v6-6.jpg", "img/v6-7.jpg", "img/v6-8.jpg", "img/v6-9.jpg", "img/v6-10.jpg"],
+  6: ["img/v6-3.jpg", "img/v6-4.jpg", "img/v6-2.jpg", "img/v6-5.jpg", "img/v6-6.jpg", "img/v6-7.jpg", "img/v6-8.jpg", "img/v6-9.jpg", "img/v6-10.jpg"],
 };
 
 /* ============================================================
