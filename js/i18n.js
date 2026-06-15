@@ -14,10 +14,11 @@ const translations = {
     nav_fishing: "PESCA",
     nav_prices: "PREUS",
     nav_bookings: "RESERVES",
+    nav_excursions: "EXCURSIONS",
     nav_contact: "CONTACTE",
     dd_colera: "Ruta Llançà / Colera",
     dd_creus: "Ruta Cap de Creus",
-    dd_personal: "Tour personal",
+    dd_personal: "Tour personalitzat",
     dd_sunset: "Tour Posta de Sol",
     pr_2h: "2 h — 180€",
     pr_4h: "4 h — 300€",
@@ -73,10 +74,11 @@ const translations = {
     nav_fishing: "PESCA",
     nav_prices: "PRECIOS",
     nav_bookings: "RESERVAS",
+    nav_excursions: "EXCURSIONES",
     nav_contact: "CONTACTO",
     dd_colera: "Ruta Llançà / Colera",
     dd_creus: "Ruta Cap de Creus",
-    dd_personal: "Tour personal",
+    dd_personal: "Tour personalizado",
     dd_sunset: "Tour Puesta de Sol",
     pr_2h: "2 h — 180€",
     pr_4h: "4 h — 300€",
@@ -132,10 +134,11 @@ const translations = {
     nav_fishing: "FISHING",
     nav_prices: "PRICES",
     nav_bookings: "BOOKINGS",
+    nav_excursions: "EXCURSIONS",
     nav_contact: "CONTACT",
     dd_colera: "Llançà / Colera Route",
     dd_creus: "Cap de Creus Route",
-    dd_personal: "Personal Tour",
+    dd_personal: "Personalized Tour",
     dd_sunset: "Sunset Tour",
     pr_2h: "2 h — €180",
     pr_4h: "4 h — €300",
@@ -191,10 +194,11 @@ const translations = {
     nav_fishing: "PÊCHE",
     nav_prices: "TARIFS",
     nav_bookings: "RÉSERVATIONS",
+    nav_excursions: "EXCURSIONS",
     nav_contact: "CONTACT",
     dd_colera: "Route Llançà / Colera",
     dd_creus: "Route Cap de Creus",
-    dd_personal: "Tour personnel",
+    dd_personal: "Tour personnalisé",
     dd_sunset: "Tour coucher de soleil",
     pr_2h: "2 h — 180€",
     pr_4h: "4 h — 300€",
@@ -406,11 +410,10 @@ function updateReserveLinks(lang) {
     btn.href = base + encodeURIComponent(msg);
   });
 
-  // Pestanya "RESERVAS" del menú (missatge genèric)
-  const navBooking = document.querySelector('a[data-i18n="nav_bookings"]');
-  if (navBooking) {
+  // Pestanya "RESERVAS" del menú (missatge genèric) — escriptori i mòbil
+  document.querySelectorAll('a[data-i18n="nav_bookings"]').forEach((navBooking) => {
     navBooking.href = base + encodeURIComponent(dict.wa_reserve_generic || "Hola! M'agradaria fer una reserva.");
-  }
+  });
 }
 
 /* ============================================================
@@ -445,20 +448,31 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  // 6) Menú mòbil
+  // 6) Menú mòbil (3 botons: excursions, reserves, contacte)
   const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".nav-row");
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("open");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  if (toggle && mobileMenu) {
+    const closeMenu = () => {
+      mobileMenu.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    };
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const open = mobileMenu.classList.toggle("open");
       toggle.setAttribute("aria-expanded", open);
     });
-    nav.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      })
-    );
+    // Es tanca en clicar un enllaç...
+    mobileMenu.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+    // ...en fer scroll...
+    window.addEventListener("scroll", () => {
+      if (mobileMenu.classList.contains("open")) closeMenu();
+    }, { passive: true });
+    // ...o en tocar fora del menú.
+    document.addEventListener("click", (e) => {
+      if (mobileMenu.classList.contains("open") && !mobileMenu.contains(e.target) && !toggle.contains(e.target)) {
+        closeMenu();
+      }
+    });
   }
 
   // 7) Animació d'aparició de les finestres en fer scroll

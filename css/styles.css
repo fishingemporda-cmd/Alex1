@@ -177,6 +177,9 @@ ul { list-style: none; }
   transition: var(--t);
 }
 
+/* Menú compacte de mòbil: amagat per defecte (només es mostra en mòbil) */
+.mobile-menu { display: none; }
+
 /* ============================================================
    2. HERO (fondo.jpg que es mou amb l'scroll)
    ============================================================ */
@@ -244,7 +247,7 @@ ul { list-style: none; }
 .windows {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 4.5rem 1.5rem;
+  padding: 2.5rem 1.5rem 4.5rem;
 }
 .windows-grid {
   display: grid;
@@ -437,8 +440,8 @@ ul { list-style: none; }
   color: var(--c-primary);
 }
 
-/* Text descriptiu (entre Inclou i Galeria) */
-.intro { background: var(--c-foam); padding: 1rem 1.5rem 3.5rem; }
+/* Text descriptiu (just sota el hero) */
+.intro { background: var(--c-foam); padding: 2.75rem 1.5rem 1.75rem; }
 .intro-text {
   max-width: 820px;
   margin: 0 auto;
@@ -582,39 +585,49 @@ ul { list-style: none; }
   .lang-switcher { gap: 0.3rem; }
   .lang-btn img { width: 26px; height: 18px; }
 
-  .nav-row {
+  /* En mòbil amaguem el menú d'escriptori i fem servir el compacte */
+  .nav-row { display: none; }
+
+  /* Menú compacte: pestanya sota el botó de menú, ancorada a la dreta i amb la mida justa */
+  .mobile-menu {
+    display: block;
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 100%;
+    right: 0.6rem;
+    margin-top: 0.4rem;
+    min-width: 11rem;
     background: var(--c-white);
+    border-radius: 12px;
     box-shadow: var(--shadow-md);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease;
+    padding: 0.4rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    z-index: 1200;
   }
-  .nav-row.open { max-height: 640px; }
-  .nav-list { flex-direction: column; align-items: stretch; padding-top: 0.5rem; }
-  .nav-item > a { text-align: center; padding: 0.85rem; }
-
-  /* El desplegable es mostra sempre dins del menú mòbil */
-  .has-dropdown > a::after { content: ""; }
-  .dropdown {
-    position: static;
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    box-shadow: none;
-    min-width: auto;
-    padding: 0 0 0.5rem;
-    background: var(--c-foam);
+  .mobile-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .mobile-menu li + li { margin-top: 0.15rem; }
+  .mobile-menu a {
+    display: block;
+    padding: 0.8rem 1.4rem;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.4px;
+    color: var(--c-deep);
     border-radius: 8px;
+    transition: var(--t);
   }
-  .dropdown a { text-align: center; }
+  .mobile-menu a:hover,
+  .mobile-menu a:active { background: var(--c-foam); color: var(--c-primary); }
 
   .windows-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; text-align: center; }
   .footer-logo { margin-left: auto; margin-right: auto; }
+  /* Icones d'Instagram i Facebook centrades en mòbil */
+  .social { justify-content: center; }
 
   /* Galeria i fletxes més contingudes en mòbil */
   .g-arrow { width: 44px; height: 44px; font-size: 1.5rem; }
