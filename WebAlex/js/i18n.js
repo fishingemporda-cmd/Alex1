@@ -489,11 +489,8 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
-  // 8) En clicar una pestanya de ruta, remarca la finestra corresponent
-  function highlightWindow() {
-    const id = decodeURIComponent(location.hash.slice(1));
-    const el = id && document.getElementById(id);
-    if (!el || !el.classList.contains("window")) return;
+  // 8) Navegació interna SENSE deixar el "#" a la URL (logo, menú, pestanyes de ruta...)
+  function flashWindow(el) {
     el.classList.add("visible"); // per si encara no s'havia revelat
     setTimeout(() => {
       el.classList.remove("flash");
@@ -502,5 +499,22 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => el.classList.remove("flash"), 1700);
     }, 220);
   }
-  window.addEventListener("hashchange", highlightWindow);
+
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const id = a.getAttribute("href").slice(1);
+    if (!id) return;                          // enllaç "#" buit
+    e.preventDefault();
+    if (id === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.scrollIntoView({ behavior: "smooth" });  // respecta el scroll-padding-top
+      if (el.classList.contains("window")) flashWindow(el);
+    }
+    // Manté l'adreça neta: treu el "#..." de la URL
+    history.replaceState(null, "", location.pathname + location.search);
+  });
 });
