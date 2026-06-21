@@ -63,6 +63,11 @@ const translations = {
     footer_address: "Llançà, Girona",
     footer_follow_title: "Segueix-nos",
     footer_rights: "Tots els drets reservats.",
+    route_view: "Veure la ruta",
+    btn_desc: "Descripció",
+    route_back: "Excursions",
+    gallery_photos: "Galeria de fotos",
+    route_soon: "Descripció detallada pròximament. Contacta'ns per a més informació!",
   },
 
   /* -------------------- CASTELLÀ -------------------- */
@@ -123,6 +128,11 @@ const translations = {
     footer_address: "Llançà, Girona",
     footer_follow_title: "Síguenos",
     footer_rights: "Todos los derechos reservados.",
+    route_view: "Ver la ruta",
+    btn_desc: "Descripción",
+    route_back: "Excursiones",
+    gallery_photos: "Galería de fotos",
+    route_soon: "Descripción detallada próximamente. ¡Contáctanos para más información!",
   },
 
   /* -------------------- ANGLÈS -------------------- */
@@ -183,6 +193,11 @@ const translations = {
     footer_address: "Llançà, Girona",
     footer_follow_title: "Follow us",
     footer_rights: "All rights reserved.",
+    route_view: "View route",
+    btn_desc: "Description",
+    route_back: "Excursions",
+    gallery_photos: "Photo gallery",
+    route_soon: "Detailed description coming soon. Contact us for more information!",
   },
 
   /* -------------------- FRANCÈS -------------------- */
@@ -243,6 +258,11 @@ const translations = {
     footer_address: "Llançà, Gérone",
     footer_follow_title: "Suivez-nous",
     footer_rights: "Tous droits réservés.",
+    route_view: "Voir l'itinéraire",
+    btn_desc: "Description",
+    route_back: "Excursions",
+    gallery_photos: "Galerie photos",
+    route_soon: "Description détaillée bientôt disponible. Contactez-nous pour plus d'informations !",
   },
 };
 
@@ -420,9 +440,21 @@ function updateReserveLinks(lang) {
    INICIALITZACIÓ
    ============================================================ */
 document.addEventListener("DOMContentLoaded", () => {
-  // 0) Evita el salt automàtic en carregar: treu el # de la URL i posa't a dalt
+  // 0) Evita el salt automàtic en carregar: treu el # de la URL i posa't a dalt.
+  //    EXCEPCIÓ: si s'arriba amb #contacte (des d'una pàgina de ruta), baixa a la zona de contacte.
+  const goContact = location.hash === "#contacte";
   if (location.hash) history.replaceState(null, "", location.pathname + location.search);
-  window.scrollTo(0, 0);
+  if (goContact) {
+    const scrollToContact = () => {
+      const el = document.getElementById("contacte");
+      if (el) el.scrollIntoView();
+    };
+    scrollToContact();
+    // Reajusta quan les imatges ja han carregat (la pàgina canvia d'alçada)
+    window.addEventListener("load", scrollToContact);
+  } else {
+    window.scrollTo(0, 0);
+  }
 
   // 1) Slideshows + galeria (els enllaços de reserva els posa setLanguage)
   buildSlideshows();
@@ -516,5 +548,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // Manté l'adreça neta: treu el "#..." de la URL
     history.replaceState(null, "", location.pathname + location.search);
+  });
+
+  // 9) Clicar una finestra obre la pàgina de detall de la ruta (mateixa pestanya).
+  //    No s'activa si es clica una fletxa del carrussel, un enllaç o el botó de reserva.
+  document.querySelectorAll(".window[data-href]").forEach((win) => {
+    win.addEventListener("click", (e) => {
+      if (e.target.closest("a") || e.target.closest(".slide-arrow")) return;
+      window.location.href = win.dataset.href;
+    });
   });
 });
