@@ -95,6 +95,25 @@ const routeDesc = {
       ] },
       { p: "Après cette pause inoubliable, le patron vous ramènera au Port de Llançà en glissant doucement sur les vagues, apportant la touche finale à deux heures de pure évasion méditerranéenne." },
     ],
+    de: [
+      { p: "Eine 2-stündige Bootstour vom Port de Llançà zum paradiesischen Strand von Garbet ist das perfekte Erlebnis, um die authentischste Costa Brava zu entdecken. Da Sie von einem einheimischen Skipper begleitet werden, müssen Sie sich um nichts kümmern; er führt Sie zu den spektakulärsten Winkeln und teilt die bestgehüteten Geschichten und Geheimnisse unserer Küste mit Ihnen." },
+      { p: "Dies ist die exklusive Route dessen, was Sie an Bord dieses zweistündigen Abenteuers erleben werden:" },
+      { h: "Geführte Fahrt entlang Steilküsten und geheimer Buchten" },
+      { p: "Beim Verlassen des Hafens nimmt der Skipper Kurs nach Norden und folgt einer vom Wind geformten Landschaft, die man nur vom Meer aus wirklich schätzen kann:" },
+      { ul: [
+        { lead: "Das markante Cap Ras", text: "Bewundern Sie diese beeindruckende, unberührte Landzunge, die Llançà von Colera trennt, mit ihren einzigartigen dunklen Felsen." },
+        { lead: "Der «natürliche Pool» der Cala Bramant", text: "Der Skipper bringt Sie nah an dieses spektakuläre, geschlossene Felsenamphitheater heran, das für sein ruhiges und glasklares Wasser bekannt ist." },
+        { lead: "Panorama unberührter Buchten", text: "Genießen Sie aus erster Reihe den Blick auf die Platja de Grifeu und den abgelegenen Strand Borró." },
+      ] },
+      { h: "VIP-Ankern in der Bucht von Garbet: Spaß und Entspannung" },
+      { p: "Der Höhepunkt kommt, wenn Sie am majestätischen Strand von Garbet ankern, einer sehr geschützten, von Weinbergen bis ans Meer umgebenen Bucht. Hier wird das Boot zu Ihrem privaten schwimmenden Club:" },
+      { ul: [
+        { lead: "Schnorcheln", text: "Wir stellen Ihnen Schnorchelbrillen zur Verfügung, damit Sie den beeindruckenden Posidonia-Meeresboden voller Fische und lokalem Leben entdecken können." },
+        { lead: "Paddle-Surf-Abenteuer", text: "Sie können das inkludierte Paddle-Surf-Board nutzen, um über das türkisfarbene Wasser zu gleiten und die Bucht in Ihrem eigenen Tempo zu erkunden." },
+        { lead: "Aperitif und Getränke gratis", text: "Nach der Action entspannen Sie an Deck bei einem wohlverdienten kühlen Getränk und einem Snack, während Sie sich von den Wellen sanft wiegen lassen." },
+      ] },
+      { p: "Nach dieser unvergesslichen Pause bringt Sie der Skipper sanft über die Wellen gleitend zurück zum Port de Llançà – der perfekte Abschluss von zwei Stunden purer mediterraner Auszeit." },
+    ],
   },
 
   v2: {
@@ -182,6 +201,27 @@ const routeDesc = {
       { h: "Un retour inoubliable à Llançà" },
       { p: "Après des heures de déconnexion, de baignades et de rires dans un cadre paradisiaque, le patron mettra le cap vers le Port de Llançà. Vous profiterez du plaisir de glisser sur les vagues, en contemplant l'immensité de la Méditerranée et la silhouette de la côte, mettant fin à une journée en mer parfaite et sur mesure." },
     ],
+    de: [
+      { p: "Eine 4- oder 6-stündige Tour in südlicher Richtung vom Port de Llançà zur legendären Cala Prona ist das ultimative Erlebnis, um das Herz des Naturparks Cap de Creus zu entdecken. Mit der Erfahrung unseres einheimischen Skippers genießen Sie eine exklusive und völlig flexible Reise, denn die Dauer der Route erlaubt es, in den Buchten zu ankern, die die Passagiere selbst unterwegs auswählen." },
+      { p: "Dies ist die faszinierende Route dessen, was Sie auf diesem Küstenabenteuer erleben werden:" },
+      { h: "Romanische Geschichte vom Meer aus sichtbar" },
+      { p: "Kurz nach dem Auslaufen, während wir an der Bucht von El Port de la Selva vorbeifahren, richten Sie den Blick auf den imposanten Berg Verdera. Dort oben, dem Abgrund auf über 500 Metern Höhe trotzend, erkennen Sie die feierlichen Türme des Klosters Sant Pere de Rodes. Dieses Juwel der katalanischen Romanik aus dem 9. Jahrhundert ist ein Benediktinerkloster, umrankt von Legenden über christliche Schiffbrüche und verborgene Reliquien, das im Mittelalter zu einem ebenso bedeutenden Wallfahrtsort wie Rom oder Santiago de Compostela wurde. Seine spektakuläre, gegen den Himmel gezeichnete Silhouette, strategisch in Terrassen angelegt, um die Küste vor Piratenangriffen zu überwachen, schenkt Ihnen eines der magischsten Panoramen der Reise." },
+      { h: "Panoramafahrt entlang des wilden Cap de Creus" },
+      { p: "Wenn Sie die Bucht hinter sich lassen, dringt das Boot in den schroffsten und spektakulärsten Abschnitt der Costa Brava vor, eine von der Tramuntana geformte Landschaft aus Vulkangestein und Schiefer:" },
+      { ul: [
+        { lead: "Das legendäre Cap de Creus", text: "Sie fahren an imposanten Steilküsten, einsamen Inselchen und Meereshöhlen vorbei, die der Skipper Ihnen nach und nach zeigt und erklärt." },
+        { lead: "Sie wählen, wo gehalten wird", text: "Sie kommen an idyllischen Winkeln wie Cala Tavallera, Cala Galladera oder Cala Culip vorbei. Die Passagiere entscheiden, wo geankert wird, um das Meer in völliger Freiheit zu genießen." },
+      ] },
+      { h: "Das Paradies der Cala Prona und Spaß an Bord" },
+      { p: "Das Sternziel der Route ist die Cala Prona, eines der unberührtesten und geschütztesten Juwele des gesamten Kaps, berühmt für seine alte Fischerhütte und sein leuchtend smaragdgrünes Wasser. Hier oder in den gewählten Buchten verwandelt sich das Boot in Ihre private Oase:" },
+      { ul: [
+        { lead: "Paddle-Surf-Ausflüge", text: "Nutzen Sie das inkludierte Paddle-Surf-Board, um die verstecktesten Winkel der Bucht zu erkunden oder sich dem unberührten Ufer zu nähern." },
+        { lead: "Meeresboden beim Schnorcheln", text: "Mit Schnorchelbrillen zu Ihrer Verfügung tauchen Sie in ein geschütztes natürliches Aquarium voller Posidonia, Seesterne und Fischschwärme ein." },
+        { lead: "Aperitif und Getränke gratis", text: "Entspannen Sie unter der Sonne der Costa Brava, während der Skipper Ihnen einen erfrischenden Snack serviert, um in bester Gesellschaft neue Kräfte zu tanken." },
+      ] },
+      { h: "Eine unvergessliche Rückkehr nach Llançà" },
+      { p: "Nach Stunden des Abschaltens, Badens und Lachens in paradiesischer Umgebung nimmt der Skipper Kurs zurück zum Port de Llançà. Sie genießen das Vergnügen, über die Wellen zu gleiten, die Weite des Mittelmeers und die Silhouette der Küste betrachtend, und beenden so einen perfekten, maßgeschneiderten Tag auf See." },
+    ],
   },
 
   v4: {
@@ -261,6 +301,25 @@ const routeDesc = {
       { h: "Retour sous le manteau du crépuscule" },
       { p: "Le soleil déjà couché et le ciel embrasé d'un dégradé de couleurs magiques, le patron entamera le doux retour vers le Port de Llançà. Vous naviguerez détendus, en profitant de la brise fraîche du soir et en contemplant l'allumage des premières lumières du port, apportant la touche finale à une après-midi de pure évasion méditerranéenne." },
     ],
+    de: [
+      { p: "Eine 2-stündige Bootstour vom Port de Llançà zum Strand von Garbet während des Sonnenuntergangs ist das romantischste und magischste Erlebnis der Costa Brava. Sie fahren in einer intimen und exklusiven Atmosphäre, während sich Himmel und Meer vollständig verwandeln und Ihnen ein unvergessliches visuelles Schauspiel schenken." },
+      { p: "Dies ist die detaillierte Route dessen, was Sie während dieser zwei goldenen Stunden erleben werden:" },
+      { h: "Fahrt im goldenen Licht der Abenddämmerung" },
+      { p: "Wenn Sie am späten Nachmittag aus dem Hafen auslaufen, empfängt Sie die Costa Brava mit einer völlig anderen Atmosphäre. Der Skipper nimmt Kurs nach Norden entlang der Steilküsten, gerade wenn die Sonne zu sinken beginnt:" },
+      { ul: [
+        { lead: "Das goldgetönte Cap Ras", text: "Sie sehen, wie sich die dunklen Felsen dieser unberührten Landzunge mit kupfernen und orangefarbenen Reflexen erleuchten." },
+        { lead: "Die Spiegelungen der Cala Bramant", text: "Wir fahren an diesem «natürlichen Pool» vorbei, dessen glasklares Wasser wie ein perfekter Spiegel wirkt und die Farben des Himmels verdoppelt." },
+        { lead: "Eine traumhafte Landschaft", text: "Die Platja de Grifeu und der Strand Borró färben sich in warmen Tönen und bieten die ideale Kulisse für die schönsten Fotos der Reise." },
+      ] },
+      { h: "Romantisches Ankern in der Bucht von Garbet und ein Toast auf die Sonne" },
+      { p: "Der Höhepunkt kommt, wenn Sie am majestätischen Strand von Garbet ankern. Mit den von den letzten Sonnenstrahlen beleuchteten Weinbergen im Hintergrund und dem völlig ruhigen Meer wird die Bucht zu Ihrer privaten Oase:" },
+      { ul: [
+        { lead: "Aperitif und Getränke gratis", text: "Es ist der perfekte Moment, um an Deck zu entspannen, ein eiskaltes Getränk und einen Snack zu genießen, während die Sonne langsam hinter den Bergen der Albera verschwindet." },
+        { lead: "Ein Bad in der Dämmerung", text: "Wenn Sie möchten, können Sie mit unseren Schnorchelbrillen in das türkisfarbene Wasser eintauchen (das zu dieser Stunde violette Töne annimmt) oder eine ruhige Fahrt auf dem Paddle-Surf-Board unter einem rosa und rötlich getönten Himmel machen." },
+      ] },
+      { h: "Rückkehr unter dem Mantel der Dämmerung" },
+      { p: "Wenn die Sonne bereits untergegangen ist und der Himmel in einem Verlauf magischer Farben erstrahlt, beginnt der Skipper die sanfte Rückkehr zum Port de Llançà. Sie fahren entspannt, genießen die frische Abendbrise und beobachten, wie die ersten Lichter des Hafens angehen – der perfekte Abschluss eines Nachmittags purer mediterraner Auszeit." },
+    ],
   },
 
   v5: {
@@ -332,6 +391,23 @@ const routeDesc = {
       ] },
       { p: "Le retour au Port de Llançà se fait en glissant doucement sur les vagues, avec la satisfaction d'avoir exploré des coins incroyables, rencontré de nouvelles personnes et profité d'une expérience nautique de premier ordre tout en optimisant au maximum votre budget." },
     ],
+    de: [
+      { p: "Eine geteilte Bootstour vom Port de Llançà ist die ideale Option, um den Zauber der nördlichen Costa Brava auf zugängliche und dynamische Weise zu erleben. Da es sich um eine geteilte Tour handelt, genießen Sie die ganze Exklusivität einer Fahrt mit einem einheimischen Skipper, teilen sich aber die Kosten mit anderen Reisenden, was einen entscheidenden Vorteil bedeutet: einen deutlich niedrigeren Preis als bei einem privaten Charter." },
+      { p: "Da Route und genaue Dauer bei jeder Ausfahrt noch festzulegen sind, wird die Überfahrt zu einem flexiblen Abenteuer. Je nach Meeresbedingungen und der für die Gruppe vereinbarten Dauer sind dies die faszinierenden Gebiete, die Sie gemeinsam entdecken können:" },
+      { h: "Eine Vielfalt an Kursen zum Entdecken" },
+      { p: "Ohne festen Reiseplan ist jede Ausfahrt einzigartig, und der einheimische Skipper passt die Route an, um das beste Erlebnis an Bord zu gewährleisten:" },
+      { ul: [
+        { lead: "Kurs Nord (Colera und Portbou)", text: "Sie umrunden das unberührte Cap Ras, bis Sie in die ruhigen Gewässer der Bucht von Colera gelangen. Sie können die imposanten Grenzklippen von Portbou und die majestätische Punta Cervera betrachten, wo die Pyrenäen buchstäblich ins Meer abtauchen. Eine Landschaft von kolossaler Schönheit, perfekt für spektakuläre Fotos." },
+        { lead: "Kurs Süd (Naturpark Cap de Creus)", text: "Sie dringen in den wildesten Abschnitt der Costa Brava vor und betrachten vom Wasser aus die Silhouette des historischen Klosters Sant Pere de Rodes. Sie fahren zwischen von der Tramuntana geformten Klippen aus dunklem Gestein und Schiefer und entdecken legendäre Buchten wie Cala Tavallera oder Cala Prona." },
+      ] },
+      { h: "Momente zum Ankern, Entspannen und neue Freundschaften schließen" },
+      { p: "Unabhängig vom gewählten Kurs ankert das Boot in einer der paradiesischen Buchten der Gegend (wie dem berühmten Strand von Garbet oder den Winkeln des Cap de Creus). In diesem Moment wird das Boot zu einem einzigartigen Treffpunkt:" },
+      { ul: [
+        { lead: "Geteilter Spaß im Wasser", text: "Sie können ins Meer springen, um mit den inkludierten Schnorchelbrillen den reichen Meeresboden zu erkunden, oder sich beim Balancieren auf dem Paddle-Surf-Board vergnügen." },
+        { lead: "Aperitif und gute Stimmung", text: "Während Sie sich an Deck unserer Quicksilver in der Sonne entspannen, servieren wir Ihnen einen Aperitif und Getränke gratis. Es ist der perfekte Moment, um zu plaudern, Anekdoten mit Ihren Mitreisenden zu teilen und das Mittelmeer in entspannter und fröhlicher Atmosphäre zu genießen." },
+      ] },
+      { p: "Die Rückkehr zum Port de Llançà erfolgt sanft über die Wellen gleitend, mit der Zufriedenheit, unglaubliche Orte erkundet, neue Menschen kennengelernt und ein erstklassiges nautisches Erlebnis genossen zu haben, während Sie Ihr Budget optimal nutzen." },
+    ],
   },
 
   v3: {
@@ -398,6 +474,22 @@ const routeDesc = {
       ] },
       { h: "Un retour flexible avec des souvenirs inoubliables" },
       { p: "Que vous choisissiez une escapade rapide de 2 heures ou une journée entière de 8 heures du lever au coucher du soleil, le retour au Port de Llançà sera un moment de détente absolue. Vous glisserez sur les vagues, en contemplant le paysage changeant de la Costa Brava et en sachant que vous avez vécu une aventure totalement unique, conçue par vous et pour vous." },
+    ],
+    de: [
+      { h: "Ein Kurs nach Ihrem Maß (Nord oder Süd)." },
+      { p: "Je nachdem, was Sie entdecken möchten, und der gewählten Zeit, plant der Skipper die ideale, an Ihren Geschmack angepasste Route:" },
+      { ul: [
+        { lead: "Kurs Nord (bis Punta Cervera)", text: "Sie fahren entlang der spektakulären Weinberge am Meer des Strandes von Garbet, umrunden die Fischerdörfer Colera und Portbou und betrachten die schwindelerregenden Grenzklippen, die zur majestätischen Punta Cervera führen. Eine schroffe Landschaft voller Geschichte und von kolossaler Schönheit." },
+        { lead: "Kurs Süd (bis zum Cap de Creus)", text: "Sie dringen ins Herz des Naturparks Cap de Creus vor. Sie fahren an der Bucht von El Port de la Selva vorbei, erblicken das imposante Kloster Sant Pere de Rodes und erkunden legendäre Buchten wie Cala Tavallera oder Cala Prona, bis Sie die legendäre Spitze des Kaps erreichen, den östlichsten Punkt der Halbinsel." },
+      ] },
+      { h: "Ihre Lieblingsbuchten, in Ihrem eigenen Tempo" },
+      { p: "Der große Vorteil dieser Route ist, dass das Boot ausschließlich in den Buchten ankert, die Sie auswählen, und so lange Sie möchten. Sie bestimmen das Tempo des Tages:" },
+      { ul: [
+        { lead: "Spaß und Abenteuer im Wasser", text: "Wenn Sie Ihren paradiesischen Winkel gewählt haben, können Sie ins Meer springen, um mit unseren Schnorchelbrillen den reichen Meeresboden zu erkunden, oder sich vergnügen, indem Sie auf dem Paddle-Surf-Board über das ruhige Wasser gleiten." },
+        { lead: "Entspannung und schwimmendes Catering", text: "Genießen Sie den Aufenthalt auf dem Boot, ohne sich um etwas kümmern zu müssen. Während Sie beim Klang der Wellen ruhen, servieren wir Ihnen einen Aperitif und Getränke gratis, um auf einen perfekten Tag auf See anzustoßen." },
+      ] },
+      { h: "Eine flexible Rückkehr mit unauslöschlichen Erinnerungen" },
+      { p: "Ob Sie eine kurze 2-stündige Auszeit oder einen ganzen 8-stündigen Tag von Sonnenaufgang bis Sonnenuntergang wählen, die Rückfahrt zum Port de Llançà wird ein Moment absoluter Entspannung sein. Sie gleiten über die Wellen, betrachten die wechselnde Landschaft der Costa Brava und wissen, dass Sie ein völlig einzigartiges Abenteuer erlebt haben, von Ihnen und für Sie gestaltet." },
     ],
   },
 
@@ -485,6 +577,27 @@ const routeDesc = {
       { h: "Retour au port avec de belles histoires" },
       { p: "Après avoir rangé le matériel, le bateau entamera un agréable voyage de retour en glissant sur les vagues de la Costa Brava. Vous arriverez de nouveau au Port de Llançà détendus, avec la brise marine sur le visage et la satisfaction d'avoir vécu une véritable journée en mer. Vous débarquerez prêts à partager vos exploits de marins, avec l'appareil photo rempli de photos de vos prises et le souvenir d'une expérience inoubliable en mer." },
       { p: "Ce tour exige que les participants possèdent leur licence de pêche respective." },
+    ],
+    de: [
+      { p: "Eine Angelausfahrt vom Port de Llançà ist die perfekte Gelegenheit, in die reichen Gewässer der Mar d'Amunt vorzudringen und die besten Spots zwischen Llançà, Colera, Portbou und dem Naturpark Cap de Creus zu erkunden. Begleitet von unserem einheimischen Skipper finden sowohl erfahrene Angler als auch Anfänger ihren idealen Platz an Bord. Zu Ihrem vollen Komfort können Sie Ihre eigene Ausrüstung mitbringen oder das Material des Bootes völlig kostenlos nutzen; lediglich ein kleiner Aufpreis fällt an, wenn Sie lebenden Köder oder Kunstköder benötigen." },
+      { p: "Außerdem beinhalten alle unsere Ausfahrten Erfrischungsgetränke und einen appetitlichen Aperitif gratis an Bord, damit Sie den Tag in vollen Zügen genießen können." },
+      { p: "Wir fahren und passen uns Ihrem Niveau und Ihren Vorlieben durch verschiedene Methoden und Zielarten an:" },
+      { h: "Technische Methoden und Zielarten" },
+      { p: "Wir stellen Ihnen die dynamischsten Techniken der aktuellen Szene zur Verfügung und passen uns der Art des Meeresbodens an:" },
+      { ul: [
+        { lead: "Methoden an Bord", text: "Wir praktizieren Techniken wie Rockfishing (leicht und aktiv), Jigging (vertikal für große Tiefen), Casting (präzise Würfe), Egging (speziell für Tintenfische und Sepien) oder Spinning (Jagd auf Raubfische mit Kunstködern)." },
+        { lead: "In Felszonen", text: "Wir suchen die begehrten Fische, die die schroffen Gründe des Cap de Creus bewohnen, wie Rotbrasse, Geißbrasse, Drachenkopf, Zackenbarsch, Bernsteinmakrele, Zahnbrasse und Goldbrasse." },
+        { lead: "In Sandzonen", text: "Wir durchkämmen die sauberen Gründe auf der Suche nach aktiven und kampfstarken Arten wie Rotbrasse, Makrele, Stöcker, Spanischer Makrele und Sardinelle." },
+      ] },
+      { h: "Zwei Ansätze und maßgeschneiderte Dauern" },
+      { p: "Diese Aktivität wird vollständig nach dem Profil der Crew gestaltet, die an Bord kommt, um das beste Erlebnis zu garantieren:" },
+      { ul: [
+        { lead: "Tour für Erwachsene und Liebhaber (Dauer: 3 bis 5 Stunden)", text: "Ein intensiver Tag für Angler, die den Tag maximal auskosten, ihre Technik verfeinern und an den strategischsten Punkten die besten Bisse suchen möchten. Am Ende kann jeder Angler – sofern der Fisch das gesetzliche Mindestmaß erfüllt – frei wählen, ob er Catch and Release praktiziert oder seinen Fang behält, um zu Hause ein hervorragendes Abendessen zu genießen." },
+        { lead: "Familienausflug / Spezial für Kinder (empfohlene Höchstdauer: 2 Stunden)", text: "Ein spielerischer und dynamischer Ansatz, damit die Kleinen die Aufregung erleben, ihren ersten Fisch zu fangen. Wir begrenzen die Zeit auf maximal 2 Stunden, um zu vermeiden, dass die Kinder müde werden oder sich langweilen, und sorgen dafür, dass die gesamte Aktivität Spaß macht. Der Skipper bringt ihnen bei, die Leine auszuwerfen und die Meeresfauna zu respektieren, wobei er die gesetzlichen Größen streng anwendet, um sie für den Schutz des Mittelmeers zu sensibilisieren." },
+      ] },
+      { h: "Rückkehr in den Hafen mit großartigen Geschichten" },
+      { p: "Nach dem Einholen der Ausrüstung beginnt das Boot eine angenehme Rückfahrt, über die Wellen der Costa Brava gleitend. Sie kommen entspannt zurück zum Port de Llançà, mit der Meeresbrise im Gesicht und der Zufriedenheit, einen authentischen Tag auf See erlebt zu haben. Sie gehen von Bord, bereit, Ihre seemännischen Heldentaten zu teilen, mit der Kamera voller Fotos Ihrer Fänge und der Erinnerung an ein einzigartiges Erlebnis auf dem Meer." },
+      { p: "Diese Tour setzt voraus, dass die Teilnehmer ihre jeweilige Angellizenz besitzen." },
     ],
   },
 };

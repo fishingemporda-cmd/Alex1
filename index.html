@@ -60,7 +60,7 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=8" />
+  <link rel="stylesheet" href="css/styles.css?v=9" />
 </head>
 
 <body id="top">
@@ -78,14 +78,14 @@
             <li class="nav-item has-dropdown">
               <a href="#v1" data-i18n="nav_private">TOUR PRIVADO</a>
               <ul class="dropdown">
-                <li><a href="#v1" data-i18n="dd_colera">Ruta Colera / Portbou</a></li>
-                <li><a href="#v2" data-i18n="dd_creus">Ruta Cap de Creus</a></li>
-                <li><a href="#v3" data-i18n="dd_personal">Tour personalizado</a></li>
-                <li><a href="#v4" data-i18n="dd_sunset">Tour Puesta de Sol</a></li>
+                <li><a href="ruta.html?r=v1" data-i18n="dd_colera">Ruta Colera / Portbou</a></li>
+                <li><a href="ruta.html?r=v2" data-i18n="dd_creus">Ruta Cap de Creus</a></li>
+                <li><a href="ruta.html?r=v3" data-i18n="dd_personal">Tour personalizado</a></li>
+                <li><a href="ruta.html?r=v4" data-i18n="dd_sunset">Tour Puesta de Sol</a></li>
               </ul>
             </li>
-            <li class="nav-item"><a href="#v5" data-i18n="nav_shared">TOUR COMPARTIDO</a></li>
-            <li class="nav-item"><a href="#v6" data-i18n="nav_fishing">PESCA</a></li>
+            <li class="nav-item"><a href="ruta.html?r=v5" data-i18n="nav_shared">TOUR COMPARTIDO</a></li>
+            <li class="nav-item"><a href="ruta.html?r=v6" data-i18n="nav_fishing">PESCA</a></li>
             <li class="nav-item has-dropdown">
               <a href="#tours" data-i18n="nav_prices">PRECIOS</a>
               <ul class="dropdown" data-nosnippet>
@@ -104,6 +104,7 @@
           <button class="lang-btn" data-lang="es" title="Español"><img src="img/flags/es.svg" alt="Español" /></button>
           <button class="lang-btn" data-lang="en" title="English"><img src="img/flags/en.svg" alt="English" /></button>
           <button class="lang-btn" data-lang="fr" title="Français"><img src="img/flags/fr.svg" alt="Français" /></button>
+          <button class="lang-btn" data-lang="de" title="Deutsch"><img src="img/flags/de.svg" alt="Deutsch" /></button>
         </div>
 
         <button class="nav-toggle" aria-label="Menú" aria-expanded="false">
@@ -193,7 +194,7 @@
           <div class="window-info">
             <h3 class="window-title"><a class="window-link" href="ruta.html?r=v5" data-i18n="w5_title">Ruta Tour Compartit</a></h3>
             <p class="window-detail" data-nosnippet>
-              <span data-i18n="w5_l1">Precio: a partir de 18€/hora.</span>
+              <span data-i18n="w5_l1">Precio: desde 18€ por persona y hora.</span>
               <span data-i18n="w5_l2">Ruta y duración a concretar.</span>
             </p>
             <div class="window-actions">
@@ -246,7 +247,7 @@
             <h3 class="window-title"><a class="window-link" href="ruta.html?r=v6" data-i18n="w6_title">Salidas de pesca</a></h3>
             <p class="window-detail" data-nosnippet>
               <span data-i18n="w6_l1">Pesca adultos y pesca infantil.</span>
-              <span data-i18n="w6_l2">A partir de 18€/h.</span>
+              <span data-i18n="w6_l2">Desde 18€ por persona y hora.</span>
               <span data-i18n="w6_l3">Ruta y duración a concretar.</span>
             </p>
             <div class="window-actions">
@@ -265,20 +266,56 @@
         <h2 data-i18n="includes_title">Todas nuestras rutas incluyen</h2>
         <ul class="includes-list">
           <li><span class="ico">🥤</span> <span data-i18n="inc_drink">Bebida</span></li>
-          <li><span class="ico">🍢</span> <span data-i18n="inc_snack">Aperitivo</span></li>
+          <li><span class="ico">🍟</span> <span data-i18n="inc_snack">Aperitivo</span></li>
           <li><span class="ico">⛽</span> <span data-i18n="inc_fuel">Combustible</span></li>
           <li><span class="ico">🛟</span> <span data-i18n="inc_boat">Seguro de barca</span></li>
           <li><span class="ico">👨‍👩‍👧</span> <span data-i18n="inc_pax">Seguro de pasajeros (SOV)</span></li>
-          <li><span class="ico">⚓</span> <span data-i18n="inc_skipper">Patrón</span></li>
-          <li><span class="ico">🛋️</span> <span data-i18n="inc_seats">Asientos acolchados</span></li>
+          <li>
+            <span class="ico">
+              <svg viewBox="0 0 48 48" width="30" height="30" aria-hidden="true">
+                <!-- visera -->
+                <path d="M12 30 Q24 36 36 30 Q24 32 12 30 Z" fill="#13161c" />
+                <!-- cinta -->
+                <path d="M10 23 H38 V28 Q38 30 36 30 H12 Q10 30 10 28 Z" fill="#13161c" />
+                <!-- copa blanca -->
+                <path d="M8 24 C8 13 16 11 24 11 C32 11 40 13 40 24 Z" fill="#ffffff" stroke="#0A3356" stroke-width="1.2" stroke-linejoin="round" />
+                <!-- emblema àncora daurat -->
+                <g fill="none" stroke="#E3B23C" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="24" cy="25" r="0.85" />
+                  <path d="M24 25.5 V28.8" />
+                  <path d="M22 26.3 H26" />
+                  <path d="M21.6 27.8 Q24 29.8 26.4 27.8" />
+                </g>
+              </svg>
+            </span>
+            <span data-i18n="inc_skipper">Patrón</span>
+          </li>
+          <li><span class="ico">💺</span> <span data-i18n="inc_seats">Asientos acolchados</span></li>
           <li><span class="ico">⛱️</span> <span data-i18n="inc_parasol">Parasol</span></li>
           <li>
             <span class="ico">
-              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
-                <path d="M2 10c0-3.6 4.5-5.5 10-5.5S22 6.4 22 10v1H2v-1z" />
-                <path d="M2 11h20l-2.2 2.4H4.2L2 11z" opacity=".55" />
-                <rect x="4" y="12.6" width="1.5" height="7.4" rx=".5" />
-                <rect x="18.5" y="12.6" width="1.5" height="7.4" rx=".5" />
+              <svg viewBox="0 0 48 48" width="30" height="30" aria-hidden="true">
+                <!-- estructura tubular cromada (potes i X de suport) -->
+                <g stroke="#5e6a76" stroke-width="1.9" stroke-linecap="round" fill="none">
+                  <path d="M12 18 L10 38" />
+                  <path d="M36 18 L38 38" />
+                  <path d="M20 18 L26 38" />
+                  <path d="M28 18 L22 38" />
+                </g>
+                <!-- corretges tensores davanteres -->
+                <g stroke="#13161c" stroke-width="1.3" stroke-linecap="round" fill="none">
+                  <path d="M14 18 L4 33" />
+                  <path d="M15.6 18 L5.4 34.8" />
+                </g>
+                <!-- peus de fixació -->
+                <g fill="#13161c">
+                  <rect x="8.4" y="37" width="3.2" height="2" rx="1" />
+                  <rect x="36.4" y="37" width="3.2" height="2" rx="1" />
+                  <rect x="20.5" y="37" width="3" height="2" rx="1" />
+                  <rect x="24.5" y="37" width="3" height="2" rx="1" />
+                </g>
+                <!-- lona del toldo bimini negra, ampla i amb vora ondulada -->
+                <path d="M5 13 Q24 9 43 13 L43 17 Q39 21 35 17.5 Q30.5 21 26 17.5 Q21.5 21 17 17.5 Q12.5 21 8 17.5 L5 16 Z" fill="#13161c" />
               </svg>
             </span>
             <span data-i18n="inc_awning">Toldo</span>
@@ -368,6 +405,6 @@
     </div>
   </footer>
 
-  <script src="js/i18n.js?v=7"></script>
+  <script src="js/i18n.js?v=10"></script>
 </body>
 </html>

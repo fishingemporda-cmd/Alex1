@@ -36,9 +36,9 @@ const translations = {
     w4_title: "Ruta Posta de Sol",
     w4_l1: "Durada 2h.", w4_l2: "Capacitat màxima 6p.", w4_l3: "Preu 180€.",
     w5_title: "Ruta Tour Compartit",
-    w5_l1: "Preu: a partir de 18€/hora.", w5_l2: "Ruta i durada a concretar.",
+    w5_l1: "Preu: a partir de 18€ per persona i hora.", w5_l2: "Ruta i durada a concretar.",
     w6_title: "Sortides de pesca",
-    w6_l1: "Pesca per a adults i infantil.", w6_l2: "A partir de 18€/h.", w6_l3: "Ruta i durada a concretar.",
+    w6_l1: "Pesca per a adults i infantil.", w6_l2: "A partir de 18€ per persona i hora.", w6_l3: "Ruta i durada a concretar.",
     coming_soon: "Fotos pròximament",
     reserve_now: "RESERVA ARA",
     tag_private: "Privat",
@@ -101,9 +101,9 @@ const translations = {
     w4_title: "Ruta Puesta de Sol",
     w4_l1: "Duración 2h.", w4_l2: "Capacidad máxima 6p.", w4_l3: "Precio 180€.",
     w5_title: "Ruta Tour Compartido",
-    w5_l1: "Precio: a partir de 18€/hora.", w5_l2: "Ruta y duración a concretar.",
+    w5_l1: "Precio: desde 18€ por persona y hora.", w5_l2: "Ruta y duración a concretar.",
     w6_title: "Salidas de pesca",
-    w6_l1: "Pesca adultos y pesca infantil.", w6_l2: "A partir de 18€/h.", w6_l3: "Ruta y duración a concretar.",
+    w6_l1: "Pesca adultos y pesca infantil.", w6_l2: "Desde 18€ por persona y hora.", w6_l3: "Ruta y duración a concretar.",
     coming_soon: "Fotos próximamente",
     reserve_now: "RESERVA AHORA",
     tag_private: "Privado",
@@ -166,9 +166,9 @@ const translations = {
     w4_title: "Sunset Route",
     w4_l1: "Duration 2h.", w4_l2: "Max. capacity 6 people.", w4_l3: "Price €180.",
     w5_title: "Shared Tour Route",
-    w5_l1: "Price: from €18/hour.", w5_l2: "Route and duration to be arranged.",
+    w5_l1: "Price: from €18 per person per hour.", w5_l2: "Route and duration to be arranged.",
     w6_title: "Fishing trips",
-    w6_l1: "Adult and children's fishing.", w6_l2: "From €18/h.", w6_l3: "Route and duration to be arranged.",
+    w6_l1: "Adult and children's fishing.", w6_l2: "From €18 per person per hour.", w6_l3: "Route and duration to be arranged.",
     coming_soon: "Photos coming soon",
     reserve_now: "BOOK NOW",
     tag_private: "Private",
@@ -231,9 +231,9 @@ const translations = {
     w4_title: "Route coucher de soleil",
     w4_l1: "Durée 2h.", w4_l2: "Capacité max. 6 pers.", w4_l3: "Prix 180€.",
     w5_title: "Route Tour Partagé",
-    w5_l1: "Prix : à partir de 18€/heure.", w5_l2: "Itinéraire et durée à convenir.",
+    w5_l1: "Prix : à partir de 18€ par personne et par heure.", w5_l2: "Itinéraire et durée à convenir.",
     w6_title: "Sorties de pêche",
-    w6_l1: "Pêche adultes et enfants.", w6_l2: "À partir de 18€/h.", w6_l3: "Itinéraire et durée à convenir.",
+    w6_l1: "Pêche adultes et enfants.", w6_l2: "À partir de 18€ par personne et par heure.", w6_l3: "Itinéraire et durée à convenir.",
     coming_soon: "Photos bientôt disponibles",
     reserve_now: "RÉSERVER",
     tag_private: "Privé",
@@ -263,6 +263,71 @@ const translations = {
     route_back: "Excursions",
     gallery_photos: "Galerie photos",
     route_soon: "Description détaillée bientôt disponible. Contactez-nous pour plus d'informations !",
+  },
+
+  /* -------------------- ALEMANY -------------------- */
+  de: {
+    page_title: "Bootstouren in Llançà & Cap de Creus | Barca Tour Llançà",
+    meta_description: "Entdecken Sie die Costa Brava und das Cap de Creus per Boot ab Llançà: versteckte Buchten mit kristallklarem Wasser, Paddle-Surf und Angelausfahrten. Die schönste Urlaubserinnerung!",
+    nav_private: "PRIVATE TOUR",
+    nav_shared: "GETEILTE TOUR",
+    nav_fishing: "ANGELN",
+    nav_prices: "PREISE",
+    nav_bookings: "BUCHUNGEN",
+    nav_excursions: "AUSFLÜGE",
+    nav_contact: "KONTAKT",
+    dd_colera: "Route Llançà / Colera",
+    dd_creus: "Route Cap de Creus",
+    dd_personal: "Individuelle Tour",
+    dd_sunset: "Sonnenuntergangstour",
+    pr_2h: "2 Std. — 180€",
+    pr_4h: "4 Std. — 300€",
+    pr_6h: "6 Std. — 410€",
+    hero_title_main: "BOOTSTOUREN",
+    hero_title_sub: "MIT PADDLE-SURF",
+    hero_subtitle: "Llançà, Colera, Portbou und Cap de Creus",
+    hero_cta: "Ausflüge ansehen",
+    w1_title: "Route Llançà / Colera",
+    w1_l1: "Dauer 2 Std.", w1_l2: "Max. 6 Personen.", w1_l3: "Preis 180€.",
+    w2_title: "Route Cap de Creus",
+    w2_l1: "Dauer 4 Std. (300€)", w2_l2: "Dauer 6 Std. (410€)", w2_l3: "Max. 6 Personen.",
+    w3_title: "Individuelle Route",
+    w3_l1: "Sie bestimmen Route und Dauer.", w3_l2: "Preis nach Vereinbarung.",
+    w4_title: "Sonnenuntergangsroute",
+    w4_l1: "Dauer 2 Std.", w4_l2: "Max. 6 Personen.", w4_l3: "Preis 180€.",
+    w5_title: "Route Geteilte Tour",
+    w5_l1: "Preis: ab 18€ pro Person und Stunde.", w5_l2: "Route und Dauer nach Absprache.",
+    w6_title: "Angelausfahrten",
+    w6_l1: "Angeln für Erwachsene und Kinder.", w6_l2: "Ab 18€ pro Person und Stunde.", w6_l3: "Route und Dauer nach Absprache.",
+    coming_soon: "Fotos in Kürze",
+    reserve_now: "JETZT BUCHEN",
+    tag_private: "Privat",
+    tag_shared: "Geteilt",
+    wa_reserve_msg: "Hallo! Ich möchte gerne buchen:",
+    wa_reserve_generic: "Hallo! Ich möchte gerne eine Buchung vornehmen.",
+    includes_title: "Alle Touren beinhalten",
+    inc_drink: "Getränk",
+    inc_snack: "Snack",
+    inc_fuel: "Kraftstoff",
+    inc_boat: "Bootsversicherung",
+    inc_pax: "Passagierversicherung (SOV)",
+    inc_skipper: "Skipper",
+    gallery_title: "GALERIE",
+    inc_seats: "Gepolsterte Sitze",
+    inc_paddle: "Paddle-Surf",
+    inc_parasol: "Sonnenschirm",
+    inc_awning: "Verdeck",
+    intro_text: "Entdecken Sie die Costa Brava und das Cap de Creus an Bord unseres Bootes. Fahren Sie durch einen Naturpark von großer landschaftlicher Schönheit, mit unglaublichen versteckten Buchten mit kristallklarem Wasser, zwischen Felsküsten, die von der Tramuntana geformt wurden. Gönnen Sie sich die schönste Erinnerung an Ihren Urlaub!",
+    footer_tagline: "Bootstouren mit Paddle-Surf entlang der Costa Brava.",
+    footer_contact_title: "Kontakt",
+    footer_address: "Llançà, Girona",
+    footer_follow_title: "Folgen Sie uns",
+    footer_rights: "Alle Rechte vorbehalten.",
+    route_view: "Route ansehen",
+    btn_desc: "Beschreibung",
+    route_back: "Ausflüge",
+    gallery_photos: "Fotogalerie",
+    route_soon: "Detaillierte Beschreibung in Kürze. Kontaktieren Sie uns für weitere Informationen!",
   },
 };
 
@@ -440,18 +505,17 @@ function updateReserveLinks(lang) {
    INICIALITZACIÓ
    ============================================================ */
 document.addEventListener("DOMContentLoaded", () => {
-  // 0) Evita el salt automàtic en carregar: treu el # de la URL i posa't a dalt.
-  //    EXCEPCIÓ: si s'arriba amb #contacte (des d'una pàgina de ruta), baixa a la zona de contacte.
-  const goContact = location.hash === "#contacte";
+  // 0) Evita el salt automàtic en carregar: treu el # de la URL i controla l'scroll.
+  //    EXCEPCIÓ: si s'arriba amb un # cap a una secció existent (#tours, #contacte...
+  //    des d'una pàgina de ruta), baixa fins a aquella secció en comptes d'anar a dalt.
+  const targetId = location.hash ? location.hash.slice(1) : "";
+  const targetEl = targetId ? document.getElementById(targetId) : null;
   if (location.hash) history.replaceState(null, "", location.pathname + location.search);
-  if (goContact) {
-    const scrollToContact = () => {
-      const el = document.getElementById("contacte");
-      if (el) el.scrollIntoView();
-    };
-    scrollToContact();
+  if (targetEl) {
+    const scrollToTarget = () => targetEl.scrollIntoView();
+    scrollToTarget();
     // Reajusta quan les imatges ja han carregat (la pàgina canvia d'alçada)
-    window.addEventListener("load", scrollToContact);
+    window.addEventListener("load", scrollToTarget);
   } else {
     window.scrollTo(0, 0);
   }
