@@ -8,19 +8,19 @@
   <link rel="icon" type="image/png" href="img/favicon.png" />
   <link rel="apple-touch-icon" href="img/favicon.png" />
 
-  <!-- SEO (el títol i la descripció s'actualitzen segons la ruta amb JS) -->
-  <title>Ruta en barca | Barca Tour Llançà</title>
+  <!-- SEO -->
+  <title>Sobre mí | Barca Tour Llançà</title>
   <meta name="description"
-        content="Descubre nuestras rutas en barca por la Costa Brava y Cap de Creus desde Llançà: calas de aguas cristalinas, paddle surf y snorkel." />
+        content="Conoce a Àlex, patrón local de Barca Tour Llançà. Más de 30 años en el Empordà compartiendo la Costa Brava más auténtica desde el mar." />
   <meta name="author" content="Barca Tour Llançà" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.barcatourllanca.com/ruta.html" />
+  <link rel="canonical" href="https://www.barcatourllanca.com/quisoc.html" />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Ruta en barca | Barca Tour Llançà" />
-  <meta property="og:description" content="Rutas en barca por la Costa Brava y Cap de Creus desde Llançà." />
-  <meta property="og:image" content="https://www.barcatourllanca.com/img/fondo.jpg" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Sobre mí | Barca Tour Llançà" />
+  <meta property="og:description" content="Conoce a Àlex, patrón local de Barca Tour Llançà." />
+  <meta property="og:image" content="https://www.barcatourllanca.com/img/quisoc.png" />
   <meta property="og:locale" content="es_ES" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -92,35 +92,33 @@
     </div>
   </header>
 
-  <!-- ============ DETALL DE LA RUTA ============ -->
-  <main class="route-detail">
-    <!-- Capçalera amb la primera foto de fons -->
-    <section class="route-hero">
-      <div class="route-hero-inner">
-        <h1 class="route-title"></h1>
-        <ul class="route-meta"></ul>
-        <a class="btn-reserve route-cta" target="_blank" rel="noopener" data-i18n="reserve_now">RESERVA AHORA</a>
+  <!-- ============ QUI SÓC ============ -->
+  <main class="about-page">
+    <section class="about">
+      <div class="about-photo">
+        <picture>
+          <source srcset="img/quisoc.webp" type="image/webp" />
+          <img src="img/quisoc.png" width="600" height="600"
+               alt="Àlex, patrón de Barca Tour Llançà, navegando por la Costa Brava" />
+        </picture>
       </div>
-    </section>
 
-    <!-- Descripció -->
-    <article class="route-body reveal">
-      <a class="route-back" href="index.html#tours">&#8249; <span data-i18n="route_back">Excursiones</span></a>
-      <div class="route-desc"></div>
-    </article>
+      <h1 class="about-title" data-i18n="about_title">Quién soy</h1>
 
-    <!-- Botó per tornar a l'inici -->
-    <div class="home-cta">
-      <a class="btn-home" href="index.html#top">
-        <svg class="btn-home-ico" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-        <span data-i18n="back_home">Volver al inicio</span>
-      </a>
-    </div>
+      <div class="about-text">
+        <p data-i18n="about_p1">Soy Àlex, llevo más de 30 años viviendo en el Empordà y el mar siempre ha formado parte de quien soy.</p>
+        <p data-i18n="about_p2">Desde siempre he sentido una conexión especial con la Costa Brava, sus calas escondidas, sus acantilados y las aguas cristalinas que la hacen única. La pesca, la navegación y la naturaleza son mis grandes pasiones, y a lo largo de los años he tenido la suerte de conocer rincones que solo se pueden descubrir desde el mar.</p>
+        <p data-i18n="about_p3">Me gusta compartir esta pasión con las personas que me acompañan a bordo. Por eso organizo paseos en barca pensados para que podáis descubrir la Costa Brava de una manera auténtica, tranquila y cercana. Cada salida es diferente, pero todas tienen algo en común: el amor por este entorno privilegiado que considero mi casa. El objetivo es que mis pasajeros no sean simples turistas, sino invitados que descubren nuestra costa tal como la vivimos los locales. Quiero llevarte a sentir la energía de la tramontana esculpida en las rocas, a bañarte en las aguas cristalinas de Cala Prona, a maravillarte con el contraste geológico de Cap Ras o a relajarte con un buen aperitivo en la majestuosa Bahía de Garbet.</p>
+        <p data-i18n="about_p4">Disfruto enseñando los lugares más especiales de la costa y haciendo que cada experiencia sea segura, agradable y llena de buenos recuerdos. Si os gusta el mar tanto como a mí, estaré encantado de compartir con vosotros los secretos y la belleza de este rincón único del Mediterráneo.</p>
+        <p data-i18n="about_p5">A bordo de mi embarcación, tú marcas el ritmo. Diseñé estas rutas para ofrecer una experiencia exclusiva, íntima y totalmente flexible, donde la seguridad y la comodidad son absolutas. Me encanta compartir las historias, leyendas y anécdotas marineras de cada rincón que visitamos, pero también sé cuándo ceder el protagonismo al sonido del oleaje para que desconectes por completo. Para mí, no hay mayor satisfacción que ver la cara de sorpresa de quien sube a bordo y saber que, al volver a puerto, se lleva un trozo del corazón de la Costa Brava más auténtica y salvaje. ¡Te espero a bordo para compartir esta aventura juntos!</p>
+      </div>
 
-    <!-- Galeria amb totes les fotos de la ruta -->
-    <section class="route-gallery-section reveal">
-      <h2 class="route-gallery-title"></h2>
-      <div class="photo-gallery"></div>
+      <div class="home-cta">
+        <a class="btn-home" href="index.html#top">
+          <svg class="btn-home-ico" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          <span data-i18n="back_home">Volver al inicio</span>
+        </a>
+      </div>
     </section>
   </main>
 
@@ -164,6 +162,5 @@
   </footer>
 
   <script src="js/i18n.js?v=15"></script>
-  <script src="js/routes.js?v=8"></script>
 </body>
 </html>
