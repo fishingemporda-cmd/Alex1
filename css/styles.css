@@ -1,4 +1,20 @@
 /* ============================================================
+   TIPOGRAFIA PROPIA (Montserrat variable, al nostre servidor)
+   Un sol fitxer cobreix tots els pesos de 100 a 900, aixi que
+   no cal cap connexio a Google Fonts.
+   ============================================================ */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/montserrat-v31-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ============================================================
    VARIABLES I PALETA (tema marí)
    ============================================================ */
 :root {
@@ -952,4 +968,95 @@ ul { list-style: none; }
 @media (max-width: 600px) {
   .lb-nav { font-size: 2.6rem; padding: 0 0.4rem; }
   .lb-close { font-size: 2.4rem; top: 8px; right: 12px; }
+}
+
+/* ============================================================
+   PAGINES LEGALS (avis legal i politica de privacitat)
+   ============================================================ */
+.legal-page { background: var(--c-foam); }
+.legal {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+.legal-title {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: var(--c-deep);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.legal-updated {
+  text-align: center;
+  color: var(--c-muted);
+  font-size: 0.9rem;
+  margin-bottom: 2.2rem;
+}
+.legal h2 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--c-deep);
+  margin: 2.1rem 0 0.7rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid rgba(0, 165, 205, 0.28);
+}
+.legal p { font-size: 1rem; line-height: 1.8; color: var(--c-deep); }
+.legal p + p { margin-top: 0.9rem; }
+/* Els enllacos del text, pero no el boto de tornar a l inici (que ja te el seu estil) */
+.legal a:not(.btn-home) { color: var(--c-primary); text-decoration: underline; }
+.legal a:not(.btn-home):hover { color: var(--c-deep); }
+.legal ul { margin-top: 0.8rem; }
+.legal li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.75;
+}
+.legal li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--c-primary);
+  font-weight: 700;
+}
+
+/* Fitxa amb les dades del titular */
+.legal-data {
+  background: var(--c-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1.2rem 1.5rem;
+  margin-top: 1rem;
+}
+.legal-data p { margin: 0; padding: 0.45rem 0; }
+.legal-data p + p { margin-top: 0; border-top: 1px solid var(--c-foam); }
+
+/* Dada que encara s'ha d'omplir */
+.pendent {
+  background: #ffe6c2;
+  color: #8a4b00;
+  font-weight: 700;
+  padding: 0.06rem 0.45rem;
+  border-radius: 5px;
+}
+
+/* Nota d'IVA sota les excursions */
+.tours-note {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.5rem 1rem;
+  text-align: center;
+  color: var(--c-muted);
+  font-size: 0.95rem;
+}
+
+/* Enllaos legals al peu de pagina */
+.footer-legal { margin-top: 0.55rem; }
+.footer-legal a { color: var(--c-sky); text-decoration: underline; }
+.footer-legal a:hover { color: var(--c-white); }
+.footer-legal .sep { opacity: 0.55; margin: 0 0.5rem; }
+
+@media (max-width: 600px) {
+  .legal { padding: 1.8rem 1.1rem 2.4rem; }
+  .legal-data { padding: 1rem 1.1rem; }
 }
